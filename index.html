@@ -6,11 +6,226 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>title</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
-  <script src="./js/index.js"></script>
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/index_media.css">
+  <script src="./js/index.js"></script>
 </head>
 <body>
-  <h1>welcome</h1>
+  <div id="wrap">
+    <!-- header -->
+    <header>
+      <div>
+        <h1><a href="#">My portfolio</a></h1>
+        <!-- nav -->
+        <nav>
+          <h2 class="hide">메인네비게이션</h2>
+          <ul>
+            <li><a href="#wrap">slogon</a></li>
+            <li><a href="#box02">about</a></li>
+            <li><a href="#box03">portfolio</a></li>
+            <li><a href="#box04">contact</a></li>
+          </ul>
+          <!-- 닫기 버튼 -->
+          <p class="close"></p>
+        </nav>
+      </div>
+      <!-- 햄버거 아이콘 -->
+      <p cllass="btn"></p>
+    </header>
+    <!-- box01 -->
+    <article>
+      <h3>Inspire with heart</h3>
+      <ul>
+        <li>
+          <span></span>
+          <dl>
+            <dt>MY STORY</dt>
+            <dd>design is what you make of it photoshop illustrotor html css jQuery</dd>
+          </dl>
+        </span>
+        </li>
+        <li>
+          <span></span>
+          <dl>
+            <dt>DESIGN</dt>
+            <dd>hyundai official site main nike korea site main illustration</dd>
+          </dl>
+        </li>
+        <li>
+          <span></span>
+          <dl>
+            <dt>CODING</dt>
+            <dd>guess official site mainhyundai official site mainsk cm mobile site main</dd>
+          </dl>
+        </li>
+      </ul>
+    </article>
+    <!-- box02 -->
+    <article>
+      <h3>about</h3>
+      <section class="info">
+        <h4><img src="./images/header_pic.png" alt="나의 이름"></h4>
+        <ul>
+          <li>
+            <dfn>Name</dfn>
+            <span>Kim chan-Ho</span>
+          </li>
+          <li>
+            <dfn>Birth</dfn>
+            <span>1995.02.14</span>
+          </li>
+          <li>
+            <dfn>Residence</dfn>
+            <span>Seoul Korea</span>
+          </li>
+          <li>
+            <dfn>Major </dfn>
+            <span>Web Design / Publishing</span>
+          </li>
+          <li>
+            <dfn>Skills  </dfn>
+            <span>Photoshp, Xhtml, Html5, CSS3, Javascript, jQuery</span>
+          </li>
+        </ul>
+      </section>
+      <section class="skill">
+        <h4>Skills</h4>
+        <ul>
+          <li>
+            <dfn>Photoshp</dfn>
+            <span>60%</span>
+          </li>
+          <li>
+            <dfn>html</dfn>
+            <span>85%</span></li>
+  
+          <li>
+            <dfn>javascript</dfn>
+            <span>80%</span>
+          </li>
+          <li>
+            <dfn>vue</dfn>
+            <span>70%</span>
+          </li>
+          <li>
+            <dfn>react</dfn>
+            <span>85%</span>
+          </li>
+        </ul>
+      </section>
+    </article>
+    <!-- box03 -->
+    <ariticle>
+      <h3>Protfolio</h3>
+      <ul>
+        <li><a href="#">tabmenu01</a></li>
+        <li><a href="#">tabmenu02</a></li>
+        <li><a href="#">tabmenu03</a></li>
+      </ul>
+      <div id="gallery">
+        <!-- show:overflow hidden -->
+        <div id="show">
+          <div class="all">
+            <!-- 1 -->
+            <figure>
+              <img src="./images/pic01.png" alt="work01">
+              <figcaption>work01</figcaption>
+            </figure>
+            <!-- <figure>
+              <img src="./images/pic02.png" alt="work02">
+              <figcaption>work02</figcaption>
+            </figure>
+            <figure>
+              <img src="./images/pic03.png" alt="work03">
+              <figcaption>work03</figcaption>
+            </figure>
+            <figure>
+              <img src="./images/pic04.png" alt="work04">
+              <figcaption>work04</figcaption>
+            </figure>
+            <figure>
+              <img src="./images/pic05.png" alt="work05">
+              <figcaption>work05</figcaption>
+            </figure>
+            <figure>
+              <img src="./images/pic06.png" alt="work06">
+              <figcaption>work06</figcaption>
+            </figure> -->
+          </div>
+          <!-- 버튼군단 -->
+          <p class="prev"></p>          
+          <p class="next"></p>
+        </div>
+      </div>
+      <div id="modal">
+        <!-- btn -->
+        <p class="close"></p>
+        <!-- 내용 -->
+        <section>
+          <h5>work제목</h5>
+          <div>
+            <figure>
+              <img src="./images/pic01.png" alt="작품01">
+              <figcaption>작품제목</figcaption>
+            </figure>
+            <dl>
+              <dt>제작년도</dt>
+              <dd>2022.01.01</dd>
+              <dt>사용프로그램</dt>
+              <dd></dd>
+              <dt>주소</dt>
+              <dd></dd>
+              <dt>설명</dt>
+              <dd></dd>
+            </dl>
+          </div>
+        </section>
+      </div>
+    </ariticle>
+    <!-- box04 -->
+    <article>
+      <h4>Contact</h4>
+      <div>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>contact</legend>                        
+            <ul>
+              <li>
+                <label for="userName">name</label>
+                <input type="text" id="userName">
+              </li>
+              <li>
+                <label for="userEmail">Email</label>
+                <input type="text" id="userEmail">
+              </li>
+              <li>
+                <label for="userPhone">Phone</label>
+                <input type="text" id="userPhone">
+              </li>
+              <li>
+                <label for="userMessage">Message</label>
+                <textarea id="userMessage" palceholder="userMessage"></textarea>
+              </li>
+            </ul>
+            <p><input type="submit" value="submit"></p>
+          </fieldset>
+        </form>
+      </div>
+    </article>
+    <!-- aside -->
+    <aside>
+      <ul class="submenu">
+        <li><a href="#wrap">slogon</a></li>
+        <li><a href="#box02">about</a></li>
+        <li><a href="#box03">portfolio</a></li>
+        <li><a href="#box04">contact</a></li>
+      </ul>
+      <p class="top"></p>
+    </aside>
+    <footer>
+      <small>Copyright (c) 2020 my portfolio by smg all right reserved</small>
+    </footer>
+
+  </div>
 </body>
 </html>
