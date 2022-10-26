@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/index_media.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap" rel="stylesheet">
   <script src="./js/index.js"></script>
 </head>
 <body>
@@ -30,10 +31,10 @@
         </nav>
       </div>
       <!-- 햄버거 아이콘 -->
-      <p cllass="btn"></p>
+      <p class="btn"></p>
     </header>
     <!-- box01 -->
-    <article>
+    <article id="box01">
       <h3>Inspire with heart</h3>
       <ul>
         <li>
@@ -61,7 +62,7 @@
       </ul>
     </article>
     <!-- box02 -->
-    <article>
+    <article id="box02">
       <h3>about</h3>
       <section class="info">
         <h4><img src="./images/header_pic.png" alt="나의 이름"></h4>
@@ -115,7 +116,7 @@
       </section>
     </article>
     <!-- box03 -->
-    <ariticle>
+    <article id="box03">
       <h3>Protfolio</h3>
       <ul>
         <li><a href="#">tabmenu01</a></li>
@@ -125,13 +126,13 @@
       <div id="gallery">
         <!-- show:overflow hidden -->
         <div id="show">
-          <div class="all">
+          <div id="all">
             <!-- 1 -->
             <figure>
               <img src="./images/pic01.png" alt="work01">
               <figcaption>work01</figcaption>
             </figure>
-            <!-- <figure>
+            <figure>
               <img src="./images/pic02.png" alt="work02">
               <figcaption>work02</figcaption>
             </figure>
@@ -150,12 +151,12 @@
             <figure>
               <img src="./images/pic06.png" alt="work06">
               <figcaption>work06</figcaption>
-            </figure> -->
+            </figure>
           </div>
-          <!-- 버튼군단 -->
-          <p class="prev"></p>          
-          <p class="next"></p>
         </div>
+        <!-- 버튼군단 -->
+        <p class="prev"></p>          
+        <p class="next"></p>
       </div>
       <div id="modal">
         <!-- btn -->
@@ -181,14 +182,14 @@
           </div>
         </section>
       </div>
-    </ariticle>
+    </article>
     <!-- box04 -->
-    <article>
-      <h4>Contact</h4>
+    <article id="box4">
+      <h3>Contact</h3>
       <div>
         <form action="#" method="post">
           <fieldset>
-            <legend>contact</legend>                        
+            <legend class="hide">contact</legend>                        
             <ul>
               <li>
                 <label for="userName">name</label>
@@ -204,7 +205,7 @@
               </li>
               <li>
                 <label for="userMessage">Message</label>
-                <textarea id="userMessage" palceholder="userMessage"></textarea>
+                <textarea id="userMessage" placeholder="userMessage"></textarea>
               </li>
             </ul>
             <p><input type="submit" value="submit"></p>
