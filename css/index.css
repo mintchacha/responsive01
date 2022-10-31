@@ -33,7 +33,7 @@ header{
 header>div{
   display:flex;
   justify-content:space-between;
-  width:1160px;
+  width:98%/* 1160px */;
   margin:0 auto;
   align-items:center;
   background-color:green;
@@ -81,8 +81,8 @@ header>.btn{
 #box01>ul{
   position:absolute;
   bottom:18.85880077369439%; left:50%;
-  margin-left:-570px;
-  width:1130px; 
+  margin-left:-50%/* -570px */;
+  width:97.41379310344828%/* 1130px */; 
   display:flex;
   flex-wrap:wrap;
   color:#fff; 
@@ -122,15 +122,15 @@ header>.btn{
   display:flex;
   justify-content:space-between;
   flex-wrap:wrap;
-  width:1160px;
+  width:98%/* 1160px */;
   margin:0 auto;
   background-color:green;
 }
 #box02>section>h4{
-  width:312px;  
+  width:26.89655172413793%/* 312px */;  
 }
 #box02>section>ul{
-  width:736px;
+  width:63.44827586206897%/* 736px */;
 }
 #box02>.info{
   margin-bottom:68px;
@@ -230,7 +230,7 @@ header>.btn{
 }
 #show{}
 #all{
-  width:1130px;
+  width:97.41379310344828%/* 1130px */;
   display:flex;
   flex-wrap:wrap;
   margin:0 auto;
@@ -263,11 +263,11 @@ header>.btn{
   color:#fff;
 }
 #box4>div{
-  width:1160px;
+  width:98%/* 1160px */;
   margin:0 auto;
 }
 #box4>div>form{
-  width:1066px;
+  width:91.89655172413793%/* 1066px */;
 }
 #box4>div>form ul{}
 #box4>div>form ul>li{
