@@ -1,0 +1,254 @@
+@media screen and (min-width:1160px){
+  header>div{
+    width:1160px;
+  }
+  #box01>ul{
+    width:1130px; 
+  }
+  #box02>section{
+    width:1160px;
+  }
+  #all{
+    width:1130px;
+  }
+  #box4>div{
+    width:1160px;  
+  }
+}
+@media screen and (max-width:1159px) and (min-width:980px){
+  #box04>div>form{
+    margin:0 atuo;
+  }
+}
+@media screen and (max-width:979px) and (min-width:580px){
+  header>div{
+    display:block;
+  }
+  header>div>h1{
+    text-align:center;
+  }
+  header>div>nav{
+    display:none;
+    position:fixed;
+    top:0; left:0;
+    width:394px;;
+    height:100%;
+    padding-top:30vh;
+    box-sizing:border-box;
+    background-color:rgba(0,0,0,0.8)
+  }
+  header>div>nav>ul{
+    display:block;
+    width:90%;
+    margin:0 auto;
+    text-align:center;
+  }
+  header>div>nav>ul>li{    
+    margin-left:0;
+    border-bottom:1px solid #fff;
+  }
+  header>div>nav>ul>li>a{
+    line-height:10vh;
+  }
+  header>div>nav>p.close{
+    width:6vh; height:6vh;
+    position:absolute;
+    right:2vh; top:2vh;
+    background-color:red;
+  }
+  header>.btn{
+    display:block;
+  }
+  /* box01 */
+  #box01>ul{
+    position:absolute;
+    bottom:18.85880077369439%;
+    width:100%/* 1130px */; 
+  }
+  #box01>ul>li>span{
+    display:block;
+    width:23vw;
+    height:23vw;
+  }
+  #box01>ul>li>dl{
+    width:23vw;
+  }
+  /* box02 */
+  #box02>.info{
+    display:block;    
+  }
+  #box02>.info>h4{
+    width:auto;
+    text-align:center;
+    margin-bottom:25px;
+  }
+  #box02>section>ul{
+    width:567px;
+    margin:0 auto;
+  }
+  #box02>.skill{
+    width:76.8vw;
+    margin:0 auto;
+  }
+  #box02>.skill>h4{
+    display:none;
+  }
+  /* box03 */
+  #box03{
+    padding-bottom:67px;
+  }
+  #gallery{
+    width:100%;
+  }
+  #show{
+    width:69.12vw;
+    margin:0 auto;
+    overflow:hidden;
+  }
+  #all{
+    width:207.39vw/* 1130px */;
+    display:flex;
+    flex-wrap:wrap;
+    margin:0 auto;
+  }
+  #all>figure{
+    width:34.56vw;
+    margin-bottom:0px;
+    background:green;
+    text-align:center;
+  }
+  #all>figure>img{
+    width:30.72vw;
+  }
+  #gallery>p{
+    top:50%;
+    margin-top:-1.92vw;   
+    width:3.84vw;
+    height:3.84vw;
+    background:red;
+  }
+  #gallery>.prev{
+    left:5.76vw;
+  }
+  #gallery>.next{
+    right:5.76vw;
+  }
+  /* box04 */
+  #box4>div>form{
+    width:92.15vw/* 1066px */;
+    margin:0 auto;
+  }
+  #box4>div>form ul>li>label{
+    padding-left:0px;
+    background:none;
+  }
+  #box4>div>form ul>li:nth-child(2)>label{
+    background-image:none
+  }
+  #box4>div>form ul>li:nth-child(3)>label{
+    background-image:none
+  }
+  #box4>div>form ul>li:nth-child(4)>label{
+    background-image:none
+  }
+/* aside */
+  aside>.submenu{
+    display:none;
+  }
+  aside>.top{
+    display:none;
+  }
+}
+@media screen and (max-width:579px) and (min-width:5px){
+  article{
+    padding:45px 0 50px;  
+    box-sizing:border-box;
+  }
+  article>h3{
+    width:90vw;
+    margin:0 auto 30px;
+    font-size:36px;
+    text-align:left;
+  }
+  header{    
+  }
+  header>div{
+    width:98%/* 1160px */;
+    margin:0 auto;
+    display:block;
+  }
+  header>div>h1{
+    text-align:center;
+  }
+  header>div>nav{
+    position:fixed;
+    width:100%; height:100%;
+    left:-100%; top:0;
+    background-color:rgba(0,0,0,0.7);
+    display:flex;
+    justify-content:center;
+    align-content: center;
+  }  
+  header>div>nav>ul{
+    display:block;
+    width:90vw;
+  }
+  header>div>nav>ul>li{
+    display:block;
+    margin-left:0;
+    border-bottom:1px solid #fff;
+    text-align:center;
+  }
+  header>div>nav>ul>li>a{
+    line-height:10.5vh
+  }
+  header>.btn{
+    display:block;
+  }
+  header>div>nav>.close{
+    display:block;
+  }
+
+  #box01>ul{
+    display:none;
+  }
+  #box01>h3{
+    color:#fff;
+    position:static;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  #box02>section{
+    width:98vw/* 1160px */;
+    display:block;
+  }
+  #box02>section>h4{
+    width:auto;
+    text-align:center;    
+  }
+  #box02>section>ul{
+    width:auto;
+  }
+  #box02>.info{
+    margin-bottom:25px;
+  }
+  #box02>.info>h4{
+    margin-bottom:33px;
+  }
+  #box02>.info>ul>li{
+    display:flex;
+    flex-wrap:wrap;
+  }
+  #box02>.info>ul>li>dfn{
+    display:inline-block;
+    width:20vw;
+  }
+  #box02>.info>ul>li>span{
+    width:70vw;
+    display:block;
+  }
+}

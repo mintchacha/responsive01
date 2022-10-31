@@ -36,7 +36,6 @@ header>div{
   width:98%/* 1160px */;
   margin:0 auto;
   align-items:center;
-  background-color:green;
 }
 header>div>h1{}
 header>div>h1>a{  
@@ -57,7 +56,7 @@ header>div>nav>ul>li>a{
 }
 header>.btn{
   position:absolute;
-  top:20px;
+  top:15px;
   right:18px;
   width:40px; height:40px;
   background-color:red;
@@ -81,12 +80,11 @@ header>.btn{
 #box01>ul{
   position:absolute;
   bottom:18.85880077369439%; left:50%;
-  margin-left:-50%/* -570px */;
+  transform:translate(-50%);
   width:97.41379310344828%/* 1130px */; 
   display:flex;
   flex-wrap:wrap;
   color:#fff; 
-  background-color:green;
 }
 #box01>ul>li{
   width:33.3333%
@@ -124,7 +122,6 @@ header>.btn{
   flex-wrap:wrap;
   width:98%/* 1160px */;
   margin:0 auto;
-  background-color:green;
 }
 #box02>section>h4{
   width:26.89655172413793%/* 312px */;  
@@ -211,11 +208,9 @@ header>.btn{
 }
 #gallery{
   position:relative;
-  width:1160px;
-  margin:0 auto;
 }
 #gallery>p{
-  display:none;
+  display:block;
   position:absolute;
   top:50%;   
   width:35px;
