@@ -11,7 +11,7 @@
   #all{
     width:1130px;
   }
-  #box4>div{
+  #box04>div{
     width:1160px;  
   }
 }
@@ -114,7 +114,6 @@
   #all>figure{
     width:34.56vw;
     margin-bottom:0px;
-    background:green;
     text-align:center;
   }
   #all>figure>img{
@@ -134,21 +133,21 @@
     right:5.76vw;
   }
   /* box04 */
-  #box4>div>form{
+  #box04>div>form{
     width:92.15vw/* 1066px */;
     margin:0 auto;
   }
-  #box4>div>form ul>li>label{
+  #box04>div>form ul>li>label{
     padding-left:0px;
     background:none;
   }
-  #box4>div>form ul>li:nth-child(2)>label{
+  #box04>div>form ul>li:nth-child(2)>label{
     background-image:none
   }
-  #box4>div>form ul>li:nth-child(3)>label{
+  #box04>div>form ul>li:nth-child(3)>label{
     background-image:none
   }
-  #box4>div>form ul>li:nth-child(4)>label{
+  #box04>div>form ul>li:nth-child(4)>label{
     background-image:none
   }
 /* aside */
@@ -157,6 +156,49 @@
   }
   aside>.top{
     display:none;
+  }
+  /* modal */
+  #modal{
+    padding:8vh 4vw 4vh;
+    box-sizing:border-box;
+  }
+  #modal>.close{
+    top:2vh; right:4vw;
+    width:8vw;
+    height:4vh;
+    background-color:red;
+  }
+  #modal>section{
+    position:static;
+    width:92vw;
+    height:88vh;
+    margin:0;
+    background:#fff;
+    padding:4vh 4vw;
+  }
+  #modal>section>h5{
+    font-size:6vh;
+    margin-bottom:2vh;
+    line-height:6vh;
+    text-align:center;
+    color:#666;
+    background:red;
+  }
+  #modal>section>div{
+    display:block;    
+  }
+  #modal>section>div>figure{
+    width:100%;
+    height:36vh;
+    overflow:hidden;
+    text-align:center;
+    margin-bottom:2vh;
+  }
+  #modal>section>div>figure>img{
+    width:100%;
+  }
+  #modal>section>div>dl{
+    width:100%;
   }
 }
 @media screen and (max-width:579px) and (min-width:5px){
@@ -188,10 +230,12 @@
     display:flex;
     justify-content:center;
     align-content: center;
+    z-index:1500;
   }  
   header>div>nav>ul{
     display:block;
     width:90vw;
+    padding-top:30vh;
   }
   header>div>nav>ul>li{
     display:block;
@@ -250,5 +294,158 @@
   #box02>.info>ul>li>span{
     width:70vw;
     display:block;
+  }  
+  #box02>.skill>h4{
+    display:none;
   }
+  /* box03 */
+  #box03{
+    padding-bottom:40px;
+  }
+  #box03>h3{}
+  #box03>ul{
+    display:block;
+    width:90vw;
+    margin:0 auto;
+  }
+  #box03>ul>li{
+    padding:0 0px;
+    border-left:none;
+    margin-bottom:20px;
+  }
+  #box03>ul>li>a{
+    display:block;
+    border:1px solid #666;
+    line-height:35px;
+    text-align:center;
+  }
+  #gallery{
+    position:relative;
+  }
+  #gallery>p{
+    display:block;
+    position:absolute;
+    top:50%;   
+    width:6vw;
+    height:6vw;
+    background:red;
+  }
+  #gallery>.prev{
+    left:6vw;
+  }
+  #gallery>.next{
+    right:6vw;
+  }
+  #show{
+    width:68vw;
+    margin:0 auto;
+    overflow:hidden;
+  }
+  #all{
+    width:408vw/* 1130px */;
+    /* display:flex;
+    flex-wrap:wrap;
+    margin:0 auto; */
+  }
+  #all>figure{
+    width:68vw;
+    margin-bottom:0px;
+    /* background:green;
+    text-align:center; */
+  }
+  #all>figure>img{
+    width:100%;
+    margin:0 auto 29px;
+    border-radius:0%;
+  }
+
+/* box04 */
+  #box04>div{
+    width:76vw/* 1160px */;    
+  }
+  #box04>div>form{
+    width:100%/* 1066px */;
+  }
+  #box04>div>form ul{}
+  #box04>div>form ul>li{
+    /* margin-bottom:35px;
+    position:relative; */
+    padding-left:0px;
+  }
+  #box04>div>form ul>li>label{
+    position:absolute;
+    left:20px; top:0;
+    width:auto;
+    line-height:50px;
+    display:block;
+    padding-left:0px;
+    /* box-sizing:border-box; */
+    font-size:20px;
+    color:red;
+    background:none;
+    z-index:10;
+  }
+  #box04>div>form ul>li:nth-child(2)>label{
+    background-image:url('../images/contact_icon_02.png')
+  }
+  #box04>div>form ul>li:nth-child(3)>label{
+    background-image:url('../images/contact_icon_03.png')
+  }
+  #box04>div>form ul>li:nth-child(4)>label{
+    background-image:url('../images/contact_icon_04.png')
+  }
+  #box04>div>form ul>li>input,
+  #box04>div>form ul>li>textarea{
+    text-indent:20px;
+  }
+  #box04>div>form p{
+    text-align:right;
+  }
+  #box04>div>form p>input{
+    width:100%;
+    border-radius:0px;
+  }
+    /* modal */
+    #modal{
+      padding:8vh 4vw 4vh;
+      box-sizing:border-box;
+    }
+    #modal>.close{
+      top:2vh; right:4vw;
+      width:8vw;
+      height:4vh;
+      background-color:red;
+    }
+    #modal>section{
+      position:static;
+      width:92vw;
+      height:88vh;
+      margin:0;
+      background:#fff;
+      padding:4vh 4vw;
+    }
+    #modal>section>h5{
+      font-size:6vh;
+      margin-bottom:2vh;
+      line-height:6vh;
+      text-align:center;
+      color:#666;
+      background:red;
+    }
+    #modal>section>div{
+      display:block;    
+    }
+    #modal>section>div>figure{
+      width:100%;
+      height:36vh;
+      overflow:hidden;
+      text-align:center;
+      margin-bottom:2vh;
+    }
+    #modal>section>div>figure>img{
+      width:100%;
+    }
+    #modal>section>div>dl{
+      width:100%;
+    }
 }
