@@ -25,7 +25,7 @@ $(window).on('resize',function(e){
 // 함수
 function gallery(){
   const figureW = $('#all>figure').width();
-  console.log(figureW)
+  // console.log(figureW)
   $('#all>figure:last').prependTo('#all')
   $('#all').css('margin-left','-'+figureW+'px')
   // event
@@ -83,14 +83,42 @@ const Text = document.querySelector('#modal dl>.text')
 // 생성자함수
 function Modal(titie,img,caption,year,program,url,text){
   this.title = titie
+  this.img = img
+  this.caption = caption
+  this.year = year
+  this.program = program
+  this.url = url
+  this.text= text
 }
 // prototype
-// Modal.prototype.action = function(){}
+Modal.prototype.action = function(){  
+  H5.innerHTML = this.title
+  Img.setAttribute('src', this.img)
+  Figcaption.innerHTML = this.caption
+  Year.innerHTML = this.year
+  Program.innerHTML = this.program
+  Url.innerHTML = this.url
+  Text.innerHTML = this.text
+}
 
 // 인스턴스
-let Moda = {
-  // new Modal('work01','이미지주소','2022','프로그램 이름','url','text')
-}
+let Modallist = [
+  new Modal('work01','./images/pic01.png','work01','2022','프로그램 이름','url','text'),
+  new Modal('work02','./images/pic02.png','work02','2022','프로그램 이름','url','text'),
+  new Modal('work03','./images/pic03.png','work03','2022','프로그램 이름','url','text'),
+  new Modal('work04','./images/pic04.png','work04','2022','프로그램 이름','url','text'),
+  new Modal('work05','./images/pic05.png','work05','2022','프로그램 이름','url','text'),
+  new Modal('work06','./images/pic06.png','work06','2022','프로그램 이름','url','text')
+]
 // 이벤트 : figure클릭(forEach문), #modal>.close클릭
 const btn = document.querySelectorAll('#box03 #all>figure')
-const close = document.querySelectorAll('#modal>p.close')
+const close = document.querySelector('#modal>.close')
+btn.forEach(function(item,index){  
+  item.addEventListener('click',function(e){
+    Modallist[index].action()
+    $('#modal').fadeIn()
+  })
+})
+close.addEventListener('click',function(e){
+  $('#modal').fadeOut()
+})
