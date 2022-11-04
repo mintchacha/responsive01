@@ -28,9 +28,8 @@
     text-align:center;
   }
   header>div>nav{
-    display:none;
     position:fixed;
-    top:0; left:0;
+    top:0; left:-100%;
     width:394px;;
     height:100%;
     padding-top:30vh;
@@ -120,6 +119,7 @@
     width:30.72vw;
   }
   #gallery>p{
+    display:block;
     top:50%;
     margin-top:-1.92vw;   
     width:3.84vw;
@@ -404,6 +404,12 @@
   #box04>div>form p>input{
     width:100%;
     border-radius:0px;
+  }
+  aside>.submenu{
+    display:none;
+  }
+  aside>.top{
+    display:none;
   }
     /* modal */
     #modal{

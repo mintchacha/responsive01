@@ -210,7 +210,7 @@ header>.btn{
   position:relative;
 }
 #gallery>p{
-  display:block;
+  display:none;
   position:absolute;
   top:50%;   
   width:35px;

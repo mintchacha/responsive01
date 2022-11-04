@@ -1,22 +1,25 @@
-import $ from "jquery";
+import $, { css } from "jquery";
 
 $(function(){
   // 미디어설정
   let windowW = $(window).width();
   if(windowW > 1160){
     nav()
+    asideTop()
   }
   else if (windowW < 1159 && windowW > 980){
     nav()
+    asideTop()
   }
   else if (windowW < 979 && windowW > 580){
     gallery()
     tnav()
   }
-  else if (windowW < 579){}
+  else if (windowW < 579){
     gallery()
     formData()
     tnav()
+  }
 })
 $(window).on('resize',function(e){
   window.location.reload()
@@ -68,8 +71,37 @@ function nav(){
   })
 }
 // tnav,mobile
-function tnav(){}
+function tnav(){
+  let navW = $('nav').width();
+  console.log(navW)
+  $('header .btn').on('click',function(e){
+    $(this).hide();
+    $('nav').animate({left:0},500)
+  })
+  $('nav li>a').on('click',function(e){
+    let aHref = $(this).attr('href')
+    let aPos = $(aHref).offset().top;
+    let header = $('header').innerHeight();
+    $('html,body').animate({scrollTop:aPos -  header},500)
+    $('nav').css('left','-'+navW+'px')
+    $('header .btn').show()
+    return false
+  })
+  $('nav .close').on('click',function(e){
+    $('nav').css('left','-'+navW+'px')
+    $('header .btn').show()
+  })
+}
 // aside
+function asideTop(){
+  $('aside li>a').on('click',function(e){
+    const navA = $(this).attr('href');
+    const aPos = $(navA).offset().top;
+    const headerHeight = $('header').innerHeight();
+    $('html,body').animate({scrollTop:aPos-headerHeight})
+  })
+  return false
+}
 // top
 
 // modal
@@ -81,10 +113,9 @@ const Program = document.querySelector('#modal dl>.program')
 const Url = document.querySelector('#modal dl>.url')
 const Text = document.querySelector('#modal dl>.text')
 // 생성자함수
-function Modal(titie,img,caption,year,program,url,text){
+function Modal(titie,pic,year,program,url,text){
   this.title = titie
-  this.img = img
-  this.caption = caption
+  this.pic = pic
   this.year = year
   this.program = program
   this.url = url
@@ -93,8 +124,8 @@ function Modal(titie,img,caption,year,program,url,text){
 // prototype
 Modal.prototype.action = function(){  
   H5.innerHTML = this.title
-  Img.setAttribute('src', this.img)
-  Figcaption.innerHTML = this.caption
+  Img.setAttribute('src', this.pic)
+  Figcaption.innerHTML = this.titie
   Year.innerHTML = this.year
   Program.innerHTML = this.program
   Url.innerHTML = this.url
@@ -102,23 +133,37 @@ Modal.prototype.action = function(){
 }
 
 // 인스턴스
-let Modallist = [
-  new Modal('work01','./images/pic01.png','work01','2022','프로그램 이름','url','text'),
-  new Modal('work02','./images/pic02.png','work02','2022','프로그램 이름','url','text'),
-  new Modal('work03','./images/pic03.png','work03','2022','프로그램 이름','url','text'),
-  new Modal('work04','./images/pic04.png','work04','2022','프로그램 이름','url','text'),
-  new Modal('work05','./images/pic05.png','work05','2022','프로그램 이름','url','text'),
-  new Modal('work06','./images/pic06.png','work06','2022','프로그램 이름','url','text')
+let modal = [
+  new Modal('title01','./images/pic01.png','2001','프로그램1','http://aaa1.com','text01'),
+  new Modal('title02','./images/pic02.png','2002','프로그램2','http://aaa2.com','text02'),
+  new Modal('title03','./images/pic03.png','2003','프로그램3','http://aaa3.com','text03'),
+  new Modal('title04','./images/pic04.png','2004','프로그램4','http://aaa4.com','text04'),
+  new Modal('title05','./images/pic05.png','2005','프로그램5','http://aaa5.com','text05'),
+  new Modal('title06','./images/pic06.png','2006','프로그램6','http://aaa6.com','text06')
 ]
 // 이벤트 : figure클릭(forEach문), #modal>.close클릭
-const btn = document.querySelectorAll('#box03 #all>figure')
-const close = document.querySelector('#modal>.close')
-btn.forEach(function(item,index){  
-  item.addEventListener('click',function(e){
-    Modallist[index].action()
-    $('#modal').fadeIn()
-  })
+const btn = document.querySelectorAll('#box03 figure')
+const close = document.querySelector('#modal .close')
+
+btn.forEach(function(item){
+  item.addEventListener('click',play)
 })
-close.addEventListener('click',function(e){
-  $('#modal').fadeOut()
-})
+close.addEventListener('click',stop)
+function play(){
+  document.querySelector('#modal').style.display = 'block'
+  let num = this.getAttribute('name')
+  console.log(num)
+  modal[num].action()
+}
+function stop(){
+  document.querySelector('#modal').style.display = 'none'
+}
+// btn.forEach(function(item,index){  
+//   item.addEventListener('click',function(e){
+//     Modallist[index].action()
+//     $('#modal').fadeIn()
+//   })
+// })
+// close.addEventListener('click',function(e){
+//   $('#modal').fadeOut()
+// })
